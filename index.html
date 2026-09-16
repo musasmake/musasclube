@@ -812,15 +812,15 @@ var PRODUTOS = {
     data: 'R$ 38 · disponível na loja e no WhatsApp',
     corpo: [
       'É o vinho que não pesa. Cobertura confortável, acabamento acetinado, e aquele tom que serve do café da manhã ao fim da noite.',
-     {raw: `<div style="position:relative;width:100%;aspect-ratio:1080/1350;border-radius:14px;overflow:hidden;margin:1.6em 0">
-  <img src="template-lully.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">
-  <div style="position:absolute;left:21.11%;top:4.15%;width:57.04%;height:40.37%;overflow:hidden;background:#000">
-    <video id="vidLully" src="video-lully-limpo.mp4" playsinline style="width:100%;height:100%;object-fit:cover"></video>
-    <button onclick="var v=document.getElementById('vidLully');v.play();this.style.display='none';v.setAttribute('controls','')"
-      style="position:absolute;inset:0;width:100%;height:100%;background:rgba(0,0,0,.22);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center">
-      <svg width="50" height="50" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.45)"/><path d="M9.5 7.5v9l8-4.5Z" fill="#fff"/></svg>
-    </button>
-  </div>
+     {raw: `<div style="position:relative;width:100%;aspect-ratio:1080/1350;border-radius:14px;overflow:hidden;margin:1.6em 0;background:#000">
+  <video id="vidLully" src="video_lully.mp4" poster="template-lully.png" playsinline
+    onended="document.getElementById('btnLully').style.display='flex'"
+    style="width:100%;height:100%;object-fit:cover;display:block"></video>
+  <button id="btnLully" onclick="var v=document.getElementById('vidLully');v.play();this.style.display='none'"
+    style="position:absolute;left:49.6%;top:24.3%;width:58px;height:58px;transform:translate(-50%,-50%);
+    background:none;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center">
+    <svg width="58" height="58" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="rgba(0,0,0,.5)"/><path d="M9.5 7.5v9l8-4.5Z" fill="#fff"/></svg>
+  </button>
 </div>`},
       'Escolhi esse porque ele resolve o problema mais comum aqui no balcão: a pessoa quer um vermelho, mas tem medo de ficar marcada demais. Esse não marca — ele assenta.',
       'Testei em cinco tons de pele diferentes, na luz da loja e na luz da rua. Em todas funcionou.',
