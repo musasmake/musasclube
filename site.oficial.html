@@ -915,7 +915,14 @@ window.addEventListener('DOMContentLoaded', function(){
     }).join('');
     listaTracks.querySelectorAll('.trk').forEach(function(t){
       t.addEventListener('click', function(){ if(deck) deck.classList.add('play'); });
-    });
+    });    var ytIds = PLAYLIST.musicas.map(function(m){
+      var m2 = m.link && m.link.match(/(?:youtu\.be\/|[?&]v=|embed\/)([A-Za-z0-9_-]{11})/);
+      return m2 ? m2[1] : null;
+    }).filter(Boolean);
+    if(ytIds.length){
+      listaTracks.insertAdjacentHTML('afterend',
+        '<a class="btn solid" style="margin-top:28px" href="https://www.youtube.com/watch_videos?video_ids='+ytIds.join(',')+'" target="_blank" rel="noopener">Ouvir todas ▸</a>');
+    }
   }
 
   var fw = document.getElementById('footWhats');
