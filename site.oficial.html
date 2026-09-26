@@ -153,6 +153,8 @@ svg,img{display:block}
 .reader .rmedia.is-media video,
 .reader .rmedia.is-media iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
 .reader .rmedia.vertical{aspect-ratio:4/5;max-width:min(340px,80%);margin-inline:auto}
+.reader .rmedia.shot{aspect-ratio:auto;background:#fff}
+.reader .rmedia.shot img{width:100%;height:auto;object-fit:contain;display:block}
 .reader .rmedia.vertical video{object-fit:contain;background:#0f0c0a}
 .reader .rnav{display:flex;justify-content:space-between;gap:12px;margin-top:2.4em;padding-top:1.4em;border-top:1px solid rgba(23,19,16,.14)}
 .reader .rnav button{background:none;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;
@@ -786,10 +788,10 @@ var CAPITULOS = {
         corpo: [
       'Se tem uma coisa que sou, é metódica. E hoje eu quero te mostrar exatamente como isso funciona na prática.',
       'Criei um sistema de kanban todo meu, personalizado do jeitinho que eu precisava, pra deixar tudo organizado. A ideia por trás dele é simples: nunca mais deixar de postar por desorganização, esquecimento ou por aquele "ah, depois eu penso nisso" que a gente sabe que nunca chega.',
-      {img: 'print-kanban.png'},
+      {img: 'print-kanban.png', wide: true},
       'Essa é a primeira tela que eu abro. Ali em cima tem o resumo do mês inteiro, quantos conteúdos estão programados, quantos ainda estão pendentes, quantos já estão em produção e quantos já saíram do forno. Logo abaixo tem a visão da semana, que eu posso alternar entre ver por data de execução ou por data de postagem, dependendo do que eu preciso enxergar naquele momento. E mais embaixo, o calendário do mês inteiro, pra eu enxergar tudo de forma ampla, sem depender só da memória.',
       'Tem também uma parte individual, onde dá pra acompanhar o processo de cada conteúdo por dentro, não só a data dele.',
-      {img: 'print-kanban-cris.png'},
+      {img: 'print-kanban-cris.png', wide: true},
       'E aí entram as colunas, que pra mim são o coração desse sistema todo. Primeiro vem o Backlog, que é onde moram as ideias ainda cruas, aquelas que eu anotei rápido antes de esquecer, mas que ainda não viraram nada de verdade. Depois vem o A fazer, que já é ideia aprovada, só esperando a hora certa de sair do papel. Na sequência tem o Fazendo, que é onde a mágica (e a bagunça) acontece de verdade, gravação, edição, ajuste fino. Depois tem uma coluna chamada Travado/Aguardando, que existe porque nem tudo depende só de mim, às vezes falta aprovação de alguém, resposta de parceria, esse tipo de coisa. E por fim, o Concluído, que é aquele alívio de ver o card finalmente descansando no lugar certo.',
       'No fim das contas, esse quadro é isso. Um jeito de garantir que, por trás de cada post que sai, exista um processo de verdade, mesmo que ele nem sempre saia do jeito que eu planejei.'
     ]
@@ -861,7 +863,7 @@ function montar(c, comBotao){
   c.corpo.forEach(function(bloco){
     if(typeof bloco === 'string') html += '<p>'+bloco+'</p>';
     else if(bloco.foto)  html += '<div class="rmedia">'+bloco.foto+'</div>';
-    else if(bloco.img)   html += '<div class="rmedia is-media"><img src="'+bloco.img+'" alt=""></div>';
+    else if(bloco.img)   html += '<div class="rmedia is-media'+(bloco.wide?' shot':'')+'"><img src="'+bloco.img+'" alt=""></div>';
     /* vídeo do seu computador (arquivo .mp4 na mesma pasta) */
     else if(bloco.video) html += '<div class="rmedia is-media"><video src="'+bloco.video+'" controls playsinline preload="metadata"></video></div>';
     /* vídeo vertical, tipo reels: fica em pé em vez de deitado */
