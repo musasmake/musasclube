@@ -502,12 +502,12 @@ footer a:hover{opacity:1}
   <div class="layer pat-b" id="escTex"></div>
   <div class="pad above pickgrid">
     <div class="vellum headblock" style="--vel:rgba(251,246,236,.94)">
-      <span class="kick mask" style="color:var(--bordo)"><span>Semana 01</span></span>
+      <span class="kick mask" style="color:var(--bordo)"><span>Semana 02</span></span>
       <h2 class="big lt mask" style="font-size:clamp(2rem,6.2vw,5.2rem);margin:.2em 0 0;color:var(--bordo)"><span>Escolhido</span></h2>
       <h2 class="big it mask" style="font-size:clamp(1.5rem,4.4vw,3.4rem);color:var(--bordo)"><span>para você.</span></h2>
-      <p class="serif-body fade" style="margin-top:.9em;color:#312720">Toda semana escolhemos um produto e contamos por quê. A esponja LIVI da LULLY MAKEUP foi a nossa escolha. Uma esponja com uma tecnologia diferente!</p>
+      <p class="serif-body fade" style="margin-top:.9em;color:#312720">Toda semana escolhemos um produto e contamos por quê. O Angel Brow Glue, da Coleção Angel Wings, foi a nossa escolha dessa vez. Uma cola fixadora de sobrancelha que promete o dia inteiro sem sair do lugar.</p>
       <div class="meta fade" style="justify-content:center">
-        <div>Produto<b>Esponja</b></div><div>Textura<b>ultra macia</b></div><div>Preço<b>R$:38</b></div>
+        <div>Produto<b>Cola fixadora</b></div><div>Textura<b>leve</b></div><div>Preço<b>R$:65</b></div>
       </div>
       <div class="fade" style="margin-top:clamp(18px,2.8vh,30px)"><button class="btn solid" id="btnEscolhido">Quero conhecer</button></div>
     </div>
@@ -515,7 +515,7 @@ footer a:hover{opacity:1}
     <div style="position:relative">
       <div class="slot fade">
         <span class="corner c1"></span><span class="corner c2"></span><span class="corner c3"></span><span class="corner c4"></span>
-        <img src="esponja.lully.png" alt="Foto do produto">
+        <img src="ESCOLHIDO/produto-escolhido.png" alt="Angel Brow Glue">
         <!-- troque a linha acima por: <img src="seu-produto.jpg" alt=""> -->
       </div>
       <div class="note fade" style="left:-4%;top:-6%;color:#FFFFFF">o escolhido da semana
@@ -826,12 +826,14 @@ var WHATSAPP = '5579981203749';
    Mesma lógica: edite aqui, o leitor monta a página sozinho.
    ========================================================================== */
 var PRODUTOS = {
-  escolhido: {
-    num: 'Semana 01 · o escolhido',
-    titulo: 'Esponja Livi - Lully Makeup',
-    data: 'R$ 38 · disponível na loja e no WhatsApp',
+    escolhido: {
+    num: 'Semana 02 · o escolhido',
+    titulo: 'Angel Brow Glue',
+    data: 'R$ 65 · disponível na loja e no WhatsApp',
     corpo: [
-      'Eu amo quando uma ferramenta de make tem um formato pensado de verdade para facilitar a vida. E essa novidade da Lully Makeup é exatamente assim. Ela tem uma base arredondada que ajuda a espalhar e esfumar produtos de pele, enquanto a ponta chega nos cantinhos mais difíceis, como ao redor dos olhos e do nariz. E o detalhe que eu mais gostei: os dois recortes na parte de baixo! Eles encaixam direitinho na região das olheiras e deixam a aplicação do corretivo muito mais prática.',
+      'Já falei aqui outras vezes que sobrancelha bem feita muda o rosto inteiro. E o Angel Brow Glue, da Coleção Angel Wings, virou meu truque novo pra isso. É uma cola fixadora, com efeito laminado que dura o dia inteiro, sem precisar retocar.',
+      'A textura é leve, seca rápido e forma uma película transparente, nada daquele brilho de cola molhada. O aplicador também ajuda bastante, é bem fininho e preciso, então não tem desperdício nem excesso escorrendo pela sobrancelha.',
+      'E pra quem se preocupa com esse tipo de coisa, eu me preocupo, ele é testado dermatologicamente, livre de parabeno, à prova d\'água e vegano. Dá pra confiar na pele e ainda sair por aí sem medo de suar ou pegar chuva.',
      {raw: `<div style="position:relative;width:100%;aspect-ratio:1080/1350;border-radius:14px;overflow:hidden;margin:1.6em 0;background:#000">
   <video id="vidLully" src="video_lully.mp4" poster="template-lully.jpg" playsinline
     onended="document.getElementById('btnLully').style.display='flex'"
